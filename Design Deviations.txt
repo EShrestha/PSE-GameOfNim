@@ -1,2 +1,5 @@
 Input - getMove
 	Return's a 2 length int array pertaining to row and quantity instead of a String so the Controller doesn't need to worry about parsing
+
+Board - checkRow
+    Checks the given row to determine the amount of pieces left in the row
