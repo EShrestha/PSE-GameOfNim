@@ -53,7 +53,7 @@ public class Input {
             int i = 0;
             while(m.find()){
                 if(!(a.length <= i)){
-                    a[i] = Integer.parseInt(m.group());
+                    a[i++] = Integer.parseInt(m.group()); // Fixed: i was not being incremented after operation so it would only put digits in index 0
                 }
             }
         } catch (IOException ioe){

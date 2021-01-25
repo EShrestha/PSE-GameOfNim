@@ -3,9 +3,9 @@ package Controllers;
 import Models.Board;
 
 public class AI {
-    public int difficulty;
+    public static int difficulty;
 
-    public Board makeMove(){
+    public static Board makeMove(){
 
         return new Board();
     }
