@@ -3,26 +3,26 @@ package Models;
 import Controllers.AI;
 
 public class Board {
-    private boolean[][] board;
-    public boolean[][] easyBoard = {{true, true, true},
+    private static boolean[][] board;
+    public static boolean[][] easyBoard = {{true, true, true},
                                     {true, true, true}};
 
-    public boolean[][] mediumBoard = {{false, false, true, false, true, false, false},
+    public static boolean[][] mediumBoard = {{false, false, true, false, true, false, false},
                                       {false, true, true, true, true, true, false},
                                       {true, true, true, true, true, true, true}};
 
-    public boolean[][] hardBoard = {{false, false, false, true, false, true, false, false, false},
+    public static boolean[][] hardBoard = {{false, false, false, true, false, true, false, false, false},
                                     {false, false, false, true, true, true, false, false, false},
                                     {true, true, true, true, false, true, true, true, true},
                                     {true, true, true, true, true, true, true, true, true}};
 
-    public boolean[][] getBoard() {
+    public static boolean[][] getBoard() {
         return board;
     }
 
     /*setBoard takes in the difficulty that the user decides and sets the
     * specifics of the board based on that difficulty*/
-    public void setBoard(int difficulty){
+    public static void setBoard(int difficulty){
         AI.difficulty = difficulty;
         switch (difficulty) {
             case 0:

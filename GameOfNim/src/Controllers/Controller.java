@@ -40,7 +40,7 @@ public class Controller {
     public void play(){
         boolean gameOver = false;
         do{
-            Output.printBoard(board); // Display board
+            Output.printBoard(); // Display board
             while (!board.removePieces(Input.requestMove("Player " + (turns % 2 == 0 ? "1" : "2") + "'s turn."))) ;
             turns++;
             if(vsMode == 2){/*AI makes move*/ System.out.println("AI Move Made");turns++;}
