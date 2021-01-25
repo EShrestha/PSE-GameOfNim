@@ -47,11 +47,7 @@ public class Board {
 
         if(quantity < 1) {System.out.println("Quantity must at least be 1"); return false; }
         try {
-            for (boolean b : board[row]) {
-                if (b) {
-                    numPieces++;
-                }
-            }
+            numPieces = checkRow(row);
             if (numPieces >= quantity) {
                 //for(int i = 0; (i<board[row].length && quantity !=0); i++){if(board[row][i]){ board[row][i]=false; quantity--;}}
                 int i = 0;
@@ -70,5 +66,17 @@ public class Board {
         }
 
         return true;
+    }
+
+    public static int checkRow (int row) {
+        int numPieces = 0;
+        
+        for (boolean b : board[row]) {
+            if (b) {
+                numPieces++;
+            }
+        }
+
+        return numPieces;
     }
 }
