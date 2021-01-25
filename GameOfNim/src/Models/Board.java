@@ -57,8 +57,7 @@ public class Board {
             if (numPieces >= quantity) {
                 for(int i = 0; (i<board[row].length && quantity !=0); i++){if(board[row][i]){ board[row][i]=false; quantity--;}}
 //                int i = 0;
-//                while (quantity >= 1) {
-//                    System.out.println("Qu:"+quantity+",NumP:"+numPieces);
+//                while (quantity > 0) {
 //                    if (board[row][i]) {
 //                        board[row][i] = false;
 //                        quantity--;
