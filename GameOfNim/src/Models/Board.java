@@ -48,15 +48,15 @@ public class Board {
         if(quantity < 1) {System.out.println("Quantity must at least be 1"); return false; }
         try {
             numPieces = checkRow(row);
-            int i = 0;
             if (numPieces >= quantity) {
-                //for(int i = 0; (i<board[row].length && quantity !=0); i++){if(board[row][i]){ board[row][i]=false; quantity--;}
+                //for(int i = 0; (i<board[row].length && quantity !=0); i++){if(board[row][i]){ board[row][i]=false; quantity--;}}
+                int i = 0;
                 while (i<board[row].length && quantity !=0) {
                     if (board[row][i]) {
                         board[row][i] = false;
                         quantity--;
-                        i++;
                     }
+                        i++;
                 }
             } else {
                 return false;
@@ -70,7 +70,7 @@ public class Board {
 
     public static int checkRow (int row) {
         int numPieces = 0;
-
+        
         for (boolean b : board[row]) {
             if (b) {
                 numPieces++;
@@ -79,4 +79,6 @@ public class Board {
 
         return numPieces;
     }
+
+    public static boolean isGameOver
 }
