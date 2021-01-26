@@ -4,14 +4,14 @@ import Controllers.AI;
 
 public class Board {
     private static boolean[][] board;
-    public static boolean[][] easyBoard = {{true, true, true},
+    public static final boolean[][] easyBoard = {{true, true, true},
                                     {true, true, true}};
 
-    public static boolean[][] mediumBoard = {{false, false, true, false, true, false, false},
+    public static final boolean[][] mediumBoard = {{false, false, true, false, true, false, false},
                                       {false, true, true, true, true, true, false},
                                       {true, true, true, true, true, true, true}};
 
-    public static boolean[][] hardBoard = {{false, false, false, true, false, true, false, false, false},
+    public static final boolean[][] hardBoard = {{false, false, false, true, false, true, false, false, false},
                                     {false, false, false, true, true, true, false, false, false},
                                     {true, true, true, true, false, true, true, true, true},
                                     {true, true, true, true, true, true, true, true, true}};
