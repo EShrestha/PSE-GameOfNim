@@ -80,5 +80,5 @@ public class Board {
         return numPieces;
     }
 
-    public static boolean isGameOver
+    public static boolean isGameOver;
 }
