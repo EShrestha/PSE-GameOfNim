@@ -3,3 +3,12 @@ Input - getMove
 
 Board - checkRow
     Checks the given row to determine the amount of pieces left in the row
+
+AI - easyMove
+    Makes a move if the difficulty is easy, then returns an int[]
+
+AI - mediumMove
+    Makes a move if the difficulty is medium, then returns an int[]
+
+AI - hardMove
+    Makes a move if the difficulty is hard, then returns an int[]
