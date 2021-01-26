@@ -80,5 +80,20 @@ public class Board {
         return numPieces;
     }
 
-    public static boolean isGameOver;
+    /*
+    * Goes through each row in the board
+    * If there are at least 2 pieces on the board, game is not over
+    * If only 1 piece is left that means game is over
+    */
+    public static boolean isGameOver(){
+        byte pieces = 0;
+        for(int i=0; i<board.length; i++){
+            for(int j=0; i<board[i].length; j++){
+                if(board[i][0]){pieces++;}
+                if(pieces > 1){return false;}
+            }
+        }
+        return true;
+    }
+
 }
