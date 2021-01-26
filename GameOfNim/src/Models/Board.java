@@ -88,8 +88,8 @@ public class Board {
     public static boolean isGameOver(){
         byte pieces = 0;
         for(int i=0; i<board.length; i++){
-            for(int j=0; i<board[i].length; j++){
-                if(board[i][0]){pieces++;}
+            for(int j=0; j<board[i].length; j++){
+                if(board[i][j]){pieces++;}
                 if(pieces > 1){return false;}
             }
         }

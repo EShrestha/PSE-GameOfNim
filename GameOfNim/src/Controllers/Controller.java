@@ -41,9 +41,11 @@ public class Controller {
             Output.printBoard(); // Display board
             while (!Board.removePieces(Input.requestMove("Player " + (turns % 2 == 0 ? "1" : "2") + "'s turn."))) ;
             turns++;
-            if(vsMode == 2){/*AI makes move*/ System.out.println("AI Move Made");turns++;}
+            if(vsMode == 2){/*AI makes move*/ Output.send("AI Move Made");turns++;}
         }while(!Board.isGameOver());
-        System.out.println("Game over!");
+        Output.printBoard();
+        Output.send("Game over!");
+        Output.send("Player " + (turns%2==0 ? "2" : "1") + " won!!!");
         // Say which won here
     }
     
