@@ -37,13 +37,12 @@ public class Controller {
     * Prints out which player won the game
     * */
     public static void play(){
-        boolean gameOver = false;
         do{
             Output.printBoard(); // Display board
             while (!Board.removePieces(Input.requestMove("Player " + (turns % 2 == 0 ? "1" : "2") + "'s turn."))) ;
             turns++;
             if(vsMode == 2){/*AI makes move*/ System.out.println("AI Move Made");turns++;}
-        }while(!gameOver);
+        }while(!Board.isGameOver());
         System.out.println("Game over!");
         // Say which won here
     }
