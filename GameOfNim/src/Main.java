@@ -1,6 +1,4 @@
 import Controllers.Controller;
-import Models.Board;
-import Views.Output;
 
 public class Main {
 
