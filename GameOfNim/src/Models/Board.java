@@ -38,8 +38,10 @@ public class Board {
     }
 
     /*
-    * TODO comment
-    * */
+     * Removes pieces based on an int[] that is passed in that contain user
+     * input for the specific row the user wants to remove from, and the
+     * quantity of pieces that the user would like to remove fom said row
+     * */
     public static boolean removePieces (int[] move) {
         int numPieces = 0;
         int row = move[0]-1;
@@ -68,6 +70,8 @@ public class Board {
         return true;
     }
 
+    /*Takes in a row to check how many pieces are left in the row,
+    * then returns the number of remaining pieces*/
     public static int checkRow (int row) {
         int numPieces = 0;
         
