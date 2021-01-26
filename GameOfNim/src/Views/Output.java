@@ -4,6 +4,9 @@ import Models.Board;
 
 public class Output {
 
+    /* takes the current board and iterates over it to print
+    out the spaces with items to the console
+     */
     public static void printBoard(){
         boolean[][] board = Board.getBoard();
         for(int row = 0; row < (board.length * 2) + 1; row++){
@@ -26,6 +29,7 @@ public class Output {
         }
     }
 
+    //basic abstraction to print a string to the console
     public static void send(String string){
         System.out.println(string);
     }

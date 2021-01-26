@@ -42,6 +42,10 @@ public class Input {
         return num;
     }
 
+    /* takes in a string which is printed, and returns an int array
+    of size 2, the first of which is the row and the second is how
+    many objects will be taken from that row
+     */
     public static int[] requestMove(String text){
         System.out.println(text);
         int[] a = new int[2];
