@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-26T02:08:27.804Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="VibYS53Eza2JQVGN1UqR" version="14.2.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-01-26T02:20:21.574Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="Dk5ZDeEMmYoUv9mZu98K" version="14.2.6" type="github">
   <diagram id="pWFZoJegDxwp1GIt3hyY" name="Page-1">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
       <root>
@@ -131,13 +131,13 @@
         <mxCell id="9i2cDJY0z38_TuPA4WnP-6" value="" style="line;strokeWidth=1;fillColor=#f8cecc;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#b85450;" vertex="1" parent="9i2cDJY0z38_TuPA4WnP-4">
           <mxGeometry y="52" width="210" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="9i2cDJY0z38_TuPA4WnP-7" value="+ easyMove () : Board" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="9i2cDJY0z38_TuPA4WnP-4">
+        <mxCell id="9i2cDJY0z38_TuPA4WnP-7" value="+ easyMove () : int[]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="9i2cDJY0z38_TuPA4WnP-4">
           <mxGeometry y="60" width="210" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="9i2cDJY0z38_TuPA4WnP-8" value="+ mediumMove () : Board" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="9i2cDJY0z38_TuPA4WnP-4">
+        <mxCell id="9i2cDJY0z38_TuPA4WnP-8" value="+ mediumMove () : int[]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="9i2cDJY0z38_TuPA4WnP-4">
           <mxGeometry y="86" width="210" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="9i2cDJY0z38_TuPA4WnP-9" value="+ hardMove () : Board" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="9i2cDJY0z38_TuPA4WnP-4">
+        <mxCell id="9i2cDJY0z38_TuPA4WnP-9" value="+ hardMove () : int[]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="9i2cDJY0z38_TuPA4WnP-4">
           <mxGeometry y="112" width="210" height="26" as="geometry" />
         </mxCell>
       </root>
