@@ -135,14 +135,13 @@ public class AI {
                         }
                     }
                 }
-                break;
             default:
                 System.out.println("D-default");
                 int ran;
                 do {
                     ran = (int)(Math.random() * 4);                                     //Fixed: this was outside of the do while loop causing it to be in an infinite loop when ran was 0
                     if (numPieces[ran] != 0) {
-                        return new int[]{ran+1, ((int) Math.random() * numPieces[ran])};
+                        return new int[]{ran+1, ((int) (Math.random() * numPieces[ran]))};
                     }
                 } while(true);
         }
