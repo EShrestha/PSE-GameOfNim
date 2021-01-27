@@ -19,10 +19,10 @@ public class Controller {
     * If they want to quit the application closes
     */
     public static void setup(){
-        // Output.display welcome text
-        //board = new Board();
+        Output.send("WELCOME TO THE GAME OF NIM\n");
         do{
-            vsMode = (Input.requestNumber("What Game Mode Would You like?\n1) PvP\n2) PvE")-1);
+            turns=0;
+            vsMode = (Input.requestNumber("What Game Mode Would You like?\n1) PvP\n2) PvE"));
             Board.setBoard((Input.requestNumber("What Difficulty would you like?\n1) Easy\n2) Medium\n3) Hard"))-1);
             play();
         }while(Input.requestNumber("What would you like to do?\n1) Play again.\n2) Quit.") != 2);
@@ -38,15 +38,15 @@ public class Controller {
     * */
     public static void play(){
         do{
+
             Output.printBoard(); // Display board
-            while (!Board.removePieces(Input.requestMove("Player " + (turns % 2 == 0 ? "1" : "2") + "'s turn."))) ;
+            if(turns%2 == 0 || vsMode == 1){while (!Board.removePieces(Input.requestMove("Player " + (turns % 2 == 0 ? "1" : "2") + "'s turn.")));}
+            if(vsMode == 2 && (turns%2!=0)){Output.send("\n\n*AI MOVE MADE*"); while (!Board.removePieces(AI.makeMove())); }
             turns++;
-            if(vsMode == 2){/*AI makes move*/ Output.send("AI Move Made");turns++;}
         }while(!Board.isGameOver());
         Output.printBoard();
         Output.send("Game over!");
         Output.send("Player " + (turns%2==0 ? "2" : "1") + " won!!!");
-        // Say which won here
     }
     
 

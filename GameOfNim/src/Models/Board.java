@@ -1,6 +1,7 @@
 package Models;
 
 import Controllers.AI;
+import Views.Output;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -66,9 +67,14 @@ public class Board {
         int row = move[0]-1;
         int quantity = move[1];
 
-        if(quantity < 1) {System.out.println("Quantity must at least be 1"); return false; }
+        System.out.println("D-ATTEMPTING TO MAKE MOVE: " + move[0]+","+move[1]);
+
+        if(quantity < 1) {Output.send("***Quantity must at least be 1***"); return false; }
+
         try {
+            if(!quantityCheck(row, quantity)){Output.send("***Cannot take all of the pieces!***"); return false;}
             numPieces = checkRow(row);
+            if(numPieces < quantity){Output.send("***There are not " + quantity + " pieces in row " + (row+1) + "***"); return false;}
             if (numPieces >= quantity) {
                 //for(int i = 0; (i<board[row].length && quantity !=0); i++){if(board[row][i]){ board[row][i]=false; quantity--;}}
                 int i = 0;
@@ -77,7 +83,7 @@ public class Board {
                         board[row][i] = false;
                         quantity--;
                     }
-                        i++;
+                    i++;
                 }
             } else {
                 return false;
@@ -118,5 +124,25 @@ public class Board {
         }
         return true;
     }
+
+    /*
+    * Checks how many total pieces there are on the board
+    * If the selected row contains all of the pieces and the user wants to remove all of the pieces then false is returned
+    * If User wants to remove an entire row but there will still be pieces left after that operation then true is returned
+    */
+    public static boolean quantityCheck(int row, int quantity){
+        int totalPiecesOnBoard = 0;
+        for(int i = 0; i<board.length; i++){
+            totalPiecesOnBoard += checkRow(i);
+        }
+        if(totalPiecesOnBoard != 1 && quantity != 1){
+            if((checkRow(row) == totalPiecesOnBoard) && (quantity == totalPiecesOnBoard)){
+                return false;
+            }
+        }
+
+        return true;
+    }
+
 
 }

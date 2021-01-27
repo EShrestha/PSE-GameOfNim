@@ -14,6 +14,7 @@ public class Input {
     public static String requestString(String text){
         System.out.println(text);
         try {
+            System.out.print(">> ");
             return new BufferedReader(new InputStreamReader(System.in)).readLine();
         } catch (IOException e) {
             System.out.println("Buffered Reader encountered an IOException");
@@ -31,6 +32,7 @@ public class Input {
         do {
         try {
                 System.out.println(text);
+                System.out.print(">> ");
                 num = Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine());
                 isNumber = true;
         } catch (IOException e) {
@@ -52,6 +54,7 @@ public class Input {
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Format your move like this: x,y where x is the row and y is the number you want to take.");
+            System.out.print(">> ");
             String input = br.readLine();
             Matcher m = Pattern.compile("\\d+").matcher(input);
             int i = 0;
