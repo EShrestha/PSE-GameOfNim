@@ -12,3 +12,18 @@ AI - mediumMove
 
 AI - hardMove
     Makes a move if the difficulty is hard, then returns an int[]
+    
+AI - makeMove
+    Helper method to make calling AIs make move easier
+    
+Controller - vsMode
+    Variable that stores what game mode the user chose, PvP or PvE
+    
+Board - removePieces
+    Changed the method parameter to accept int[] representing a move instead of int row, and int quantity, to make the controller's job more simple
+    
+Board - isGameOver
+    Goes through entire board to count number of pieces left, if only one piece is left, game is over returns true, else game is not over returns false.
+    
+Board - quantityCheck
+	Checks if the user is allowed to take an entire row by seeing if there are other rows that have pieces
