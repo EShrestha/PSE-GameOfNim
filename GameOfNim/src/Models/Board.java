@@ -19,6 +19,7 @@ public class Board {
                                     {true, true, true, true, false, true, true, true, true},
                                     {true, true, true, true, true, true, true, true, true}};
 
+    /*Returns the board*/
     public static boolean[][] getBoard() {
         return board;
     }
