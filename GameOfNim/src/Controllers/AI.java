@@ -135,6 +135,7 @@ public class AI {
                         }
                     }
                 }
+                break;
             default:
                 System.out.println("D-default");
                 int ran;
