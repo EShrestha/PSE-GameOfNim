@@ -3,9 +3,6 @@ package Models;
 import Controllers.AI;
 import Views.Output;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class Board {
     private static boolean[][] board;
     public static final boolean[][] easyBoard = {{true, true, true},
@@ -67,7 +64,6 @@ public class Board {
         int row = move[0]-1;
         int quantity = move[1];
 
-        System.out.println("D-ATTEMPTING TO MAKE MOVE: " + move[0]+","+move[1]);
 
         if(quantity < 1) {Output.send("***Quantity must at least be 1***"); return false; }
 

@@ -93,7 +93,6 @@ public class AI {
         }
         switch(empty){
             case(3):
-                System.out.println("D-case 3");
                 for(int i = 0; i < 4; i++){
                     if(numPieces[i] != 0){
                         if(numPieces[i] > 1){
@@ -105,7 +104,6 @@ public class AI {
                 }
                 break;
             case(2):
-                System.out.println("D-case 2");
                 int first = -1;
                 for(int i = 0; i < 4; i++){
                     if(numPieces[i] != 0){
@@ -122,7 +120,6 @@ public class AI {
                 }
                 break;
             case(1):
-                System.out.println("D-case 1");
                 int one = 0;
                 for(int i = 0; i < 4; i++){
                     if(numPieces[i] != 0){
@@ -136,7 +133,6 @@ public class AI {
                     }
                 }
             default:
-                System.out.println("D-default");
                 int ran;
                 do {
                     ran = (int)(Math.random() * 4);                                     //Fixed: this was outside of the do while loop causing it to be in an infinite loop when ran was 0

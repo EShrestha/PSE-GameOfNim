@@ -24,15 +24,14 @@ public class Input {
 
     /*requestNumber takes in a String and relays it to the user, usually as a prompt for input.
     The console is then read to get user input and then parses it to an int, which is passed back.
-    TODO finish this comment about the loop
+    Until the input properly parses as number, the loop will continue asking for input
     */
     public static int requestNumber(String text){
         boolean isNumber = false;
         int num = -2 ^ 31;
         do {
         try {
-                System.out.println(text);
-                System.out.print(">> ");
+                System.out.print(text + "\n>> ");
                 num = Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine());
                 isNumber = true;
         } catch (IOException e) {
