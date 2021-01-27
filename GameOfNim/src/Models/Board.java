@@ -2,6 +2,9 @@ package Models;
 
 import Controllers.AI;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Board {
     private static boolean[][] board;
     public static final boolean[][] easyBoard = {{true, true, true},
@@ -24,16 +27,31 @@ public class Board {
     * specifics of the board based on that difficulty*/
     public static void setBoard(int difficulty){
         AI.difficulty = difficulty;
+        int length = 0;
         switch (difficulty) {
             case 0:
-                board = easyBoard;
+                length = easyBoard.length;
                 break;
             case 1:
-                board = mediumBoard;
+                length = mediumBoard.length;
                 break;
             case 2:
-                board = hardBoard;
+                length = hardBoard.length;
                 break;
+        }
+        board = new boolean[length][];
+        for(int i = 0; i < length; i++){
+            switch (difficulty) {
+                case 0:
+                    board[i] = easyBoard[i].clone();
+                    break;
+                case 1:
+                    board[i] = mediumBoard[i].clone();
+                    break;
+                case 2:
+                    board[i] = hardBoard[i].clone();
+                    break;
+            }
         }
     }
 
