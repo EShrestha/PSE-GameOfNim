@@ -7,8 +7,43 @@ public class Tester {
 
     @Test
     public void testCheckRow() {
-        Board.setBoard(1);
-            assertEquals(6, Board.checkRow(2));
+
+    }
+    @Test
+    public void testEasyAI() {
+        
+    }
+    @Test
+    public void testMediumAI() {
+
+    }
+    @Test
+    public void testHardAI() {
+
+    }
+    @Test
+    public void testGetBoard() {
+
+    }
+    @Test
+    public void testRemovePieces() {
+
+    }
+    @Test
+    public void testIsGameOver() {
+
+    }
+    @Test
+    public void testQuantityCheck() {
+
+    }
+    @Test
+    public void testRequestNumber() {
+
+    }
+    @Test
+    public void testRequestMove() {
+
     }
 
 }
