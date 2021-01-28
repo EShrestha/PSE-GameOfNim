@@ -96,6 +96,7 @@ public class AI {
                 for(int i = 0; i < 4; i++){
                     if(numPieces[i] != 0){
                         if(numPieces[i] > 1){
+                            //Returns a move that takes all but one piece in the first non-empty row
                             return new int[]{i+1, (numPieces[i] - 1)};
                         } else {
                             return new int[]{i+1,1};
