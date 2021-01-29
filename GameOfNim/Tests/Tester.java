@@ -18,9 +18,15 @@ public class Tester {
     @Test
     public void testEasyAI() {
         Board.setBoard(0);
-        int[] aiMove = AI.easyMove();
-        Board.removePieces(aiMove);
-        assertEquals(2, Board.checkRow(0));
+
+        int[] move = AI.easyMove();
+        if((move[0] < 1 || move[0] > 2)){
+            fail();
+        } else if ((move[0] < 1 || move[0] > 3)) {
+            fail();
+        } else {
+            assertTrue(true);
+        }
     }
     @Test
     public void testMediumAI() {
