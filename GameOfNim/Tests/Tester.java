@@ -30,11 +30,18 @@ public class Tester {
     }
     @Test
     public void testEasyAI() {
-
+        Board.setBoard(0);
+        int[] aiMove = AI.easyMove();
+        Board.removePieces(aiMove);
+        assertEquals(2, Board.checkRow(0));
     }
     @Test
     public void testMediumAI() {
-
+        Board.setBoard(1);
+        Board.removePieces(new int[]{2,4});
+        int[] aiMove = AI.mediumMove();
+        Board.removePieces(aiMove);
+        assertEquals(1, Board.checkRow(2));
     }
     @Test
     public void testHardAI() {

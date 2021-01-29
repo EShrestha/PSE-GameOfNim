@@ -58,7 +58,7 @@ public class AI {
         int empty = 0;
 
         for (int i = 0; i < rows.length; i++){
-            if (rows[1] == 0) {
+            if (rows[i] == 0) {
                 empty++;
             }
         }
