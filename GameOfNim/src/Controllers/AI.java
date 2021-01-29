@@ -70,6 +70,14 @@ public class AI {
 
             numberOfPieces = (int) (Math.random() * rows[selectedRow]) + 1;
         }
+        else {
+            for (int i = 0; i < rows.length; i++){
+                if (rows[i] != 0) {
+                    selectedRow = i;
+                    numberOfPieces = rows[i] - 1;
+                }
+            }
+        }
 
         moveArray = new int[]{selectedRow+1, numberOfPieces};
 

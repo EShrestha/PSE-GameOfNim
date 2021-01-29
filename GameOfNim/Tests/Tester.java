@@ -31,21 +31,24 @@ public class Tester {
     }
     @Test
     public void testMediumAI() {
-        //setting up the medium board so that on of the rows has only one piece in it
+        //setting up the medium board so that only one of the rows has pieces in it
         Board.setBoard(1);
-        Board.removePieces(new int[]{2,4});
+        Board.removePieces(new int[]{2,5});
+        Board.removePieces(new int[]{1,2});
 
-        //AI should not have taken the last piece of the 2nd row, the one with only one piece left
+        //makes sure the AI takes all but one of the remaining pieces from the last row
         int[] aiMove = AI.mediumMove();
-        Board.removePieces(aiMove);
-        assertEquals(1, Board.checkRow(1));
+        assertEquals(6, aiMove[1]);
     }
     @Test
     public void testHardAI() {
+        //setting up the hard board so that only one of the rows has pieces in it
         Board.setBoard(2);
         Board.removePieces(new int[]{1,2});
         Board.removePieces(new int[]{2,3});
         Board.removePieces(new int[]{3,8});
+
+        //makes sure the AI takes all but one of the remaining pieces from the last row
         int[] aiMove = AI.hardMove();
         assertEquals(4, aiMove[0]);
         assertEquals(8, aiMove[1]);
