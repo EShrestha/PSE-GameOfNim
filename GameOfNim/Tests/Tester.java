@@ -57,11 +57,33 @@ public class Tester {
     }
     @Test
     public void testIsGameOver() {
+        Board.setBoard(0);
+
+        Board.removePieces(new int[]{1,3}); // Simulating a player taking 3 of 3 pieces from row one
+        Board.removePieces(new int[]{2,1}); // Simulating a player taking 1 of 3 pieces from row two
+
+        // Game should not be over since there are 2 pieces still left in row 2
+        assertFalse(Board.isGameOver());
+
+        Board.removePieces(new int[]{2,1}); // Simulating a player taking 1 of 2 pieces from row two
+
+        // Game should now be over since ther is only 1 piece left on the entire board
+        assertTrue(Board.isGameOver());
+
 
     }
     @Test
     public void testQuantityCheck() {
+        Board.setBoard(0);
 
+        // User can take all 3 pieces from top row since there will be pieces on the second row
+        assertTrue(Board.quantityCheck(0, 3));
+
+        //Removing all pieces from row 1
+        Board.removePieces(new int[]{1,3});
+
+        // User cannot take all 3 pieces from row 2 because all of row 1s pieces were taken above so then if all pieces are taken from row 2 there would be 0 pieces left
+        assertFalse(Board.quantityCheck(1, 3));
     }
 
 }
