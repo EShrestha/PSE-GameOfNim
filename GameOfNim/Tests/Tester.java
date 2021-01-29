@@ -19,10 +19,11 @@ public class Tester {
     public void testEasyAI() {
         Board.setBoard(0);
 
+        //checks to see if the method returns a valid row and number of pieces to be removed
         int[] move = AI.easyMove();
-        if((move[0] < 1 || move[0] > 2)){
+        if(move[0] < 1 || move[0] > 2){
             fail();
-        } else if ((move[0] < 1 || move[0] > 3)) {
+        } else if (move[0] < 1 || move[0] > 3) {
             fail();
         } else {
             assertTrue(true);
@@ -30,11 +31,14 @@ public class Tester {
     }
     @Test
     public void testMediumAI() {
+        //setting up the medium board so that on of the rows has only one piece in it
         Board.setBoard(1);
         Board.removePieces(new int[]{2,4});
+
+        //AI should not have taken the last piece of the 2nd row, the one with only one piece left
         int[] aiMove = AI.mediumMove();
         Board.removePieces(aiMove);
-        assertEquals(1, Board.checkRow(2));
+        assertEquals(1, Board.checkRow(1));
     }
     @Test
     public void testHardAI() {
